@@ -33,8 +33,8 @@ function main() {
     	});*/
 
       // Exercise 4
-      let restart = document.getElementById("start");
-    	let status = document.getElementById("status");
+      var restart = document.getElementById("start");
+    	var status = document.getElementById("status");
 
     	restart.addEventListener("click", function(){
     		var mazwal = document.querySelectorAll(".boundary");
@@ -52,7 +52,7 @@ function main() {
 
       //Exercise 5
       var end = document.getElementById("end");
-    ///	var status = document.getElementById("status");
+      var status = document.getElementById("status");
 
     	end.addEventListener("mouseover", function(){
     		if(document.querySelectorAll(".youlose").length == 0){
@@ -62,5 +62,20 @@ function main() {
     		}
     	});
 
-      
+      //Exercise 6
+      let cheatChecker = document.getElementById("start");
+      let maze = document.getElementById("maze");
+
+      cheatChecker.addEventListener("mouseout", function(){
+        maze.addEventListener("mouseleave", function(){
+          for(var i = 0; i < allboundary.length; i++){
+            document.getElementById("status").textContent = "You lose!"
+            for(var i = 0; i < allboundary.length; i++){
+              if( allboundary[i].className.indexOf("example") == -1){
+                allboundary[i].className = "boundary youlose";
+              }
+            }
+          }
+        });
+      });
 }

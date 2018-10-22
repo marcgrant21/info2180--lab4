@@ -49,4 +49,18 @@ function main() {
     			status.textContent = "Move your mouse over the \"S\" to begin.";
     		}
     	});
+
+      //Exercise 5
+      var end = document.getElementById("end");
+    ///	var status = document.getElementById("status");
+
+    	end.addEventListener("mouseover", function(){
+    		if(document.querySelectorAll(".youlose").length == 0){
+    			status.innerHTML = "You win!";
+    		}else{
+    			status.innerHTML = "You Lose!";
+    		}
+    	});
+
+      
 }

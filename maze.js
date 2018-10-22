@@ -32,7 +32,7 @@ function main() {
     		}
     	});*/
 
-      // Exercise 4
+      ///Exercise 4
       var restart = document.getElementById("start");
     	var status = document.getElementById("status");
 

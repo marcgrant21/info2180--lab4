@@ -23,4 +23,11 @@ function main() {
    			});
    		}
    	}
+    var end = document.getElementById("end");
+
+    	end.addEventListener("mouseover", function(){
+    		if (document.getElementsByClassName("boundary youlose").length == 0){
+    			alert("You Win!!");
+    		}
+    	});
 }
